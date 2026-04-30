@@ -3,103 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travel Booking Website</title>
+<title>TravelGo - Book Your Trip</title>
 
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f5f9;
 }
 
 /* Navbar */
 .navbar {
-    background: #0a223d;
-    color: white;
-    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
+    padding: 15px 50px;
+    background: #0a2239;
+    color: white;
 }
+
 .navbar h2 {
     margin: 0;
 }
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-.navbar ul li {
-    cursor: pointer;
+
+.nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
 }
 
 /* Hero Section */
 .hero {
     background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
-    height: 350px;
+    height: 90vh;
     color: white;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-}
-.hero h1 {
-    font-size: 40px;
-    background: rgba(0,0,0,0.5);
-    padding: 15px;
-    border-radius: 10px;
+    text-align: center;
 }
 
-/* Search Box */
-.search-box {
-    background: white;
-    margin: -50px auto;
-    width: 80%;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.hero h1 {
+    font-size: 50px;
 }
+
+.search-box {
+    margin-top: 20px;
+}
+
 .search-box input, .search-box button {
     padding: 10px;
-    font-size: 16px;
-}
-.search-box button {
-    background: #ff5a5f;
-    color: white;
+    margin: 5px;
     border: none;
+    border-radius: 5px;
+}
+
+.search-box button {
+    background: orange;
+    color: white;
     cursor: pointer;
 }
 
-/* Cards Section */
-.section {
+/* Destinations */
+.destinations {
     padding: 40px;
+    text-align: center;
 }
+
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
 .card {
-    background: white;
+    width: 250px;
+    margin: 15px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
 .card img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
 }
+
 .card h3 {
     padding: 10px;
 }
-.card p {
-    padding: 0 10px 10px;
+
+/* Offers */
+.offers {
+    background: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+}
+
+.offer-box {
+    display: inline-block;
+    padding: 20px;
+    background: white;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 /* Footer */
 .footer {
-    background: #0a223d;
+    background: #0a2239;
     color: white;
     text-align: center;
     padding: 20px;
@@ -112,71 +120,69 @@ body {
 
 <!-- Navbar -->
 <div class="navbar">
-    <h2>TravelNow</h2>
-    <ul>
-        <li>Flights</li>
-        <li>Hotels</li>
-        <li>Packages</li>
-        <li>Contact</li>
-    </ul>
+    <h2>TravelGo</h2>
+    <div class="nav-links">
+        <a href="#">Flights</a>
+        <a href="#">Hotels</a>
+        <a href="#">Packages</a>
+        <a href="#">Contact</a>
+    </div>
 </div>
 
 <!-- Hero Section -->
 <div class="hero">
-    <h1>Explore the World with Us</h1>
+    <h1>Explore The World</h1>
+    <p>Book Flights, Hotels & Holiday Packages</p>
+
+    <div class="search-box">
+        <input type="text" placeholder="From">
+        <input type="text" placeholder="To">
+        <input type="date">
+        <button>Search</button>
+    </div>
 </div>
 
-<!-- Search Box -->
-<div class="search-box">
-    <input type="text" placeholder="From">
-    <input type="text" placeholder="To">
-    <input type="date">
-    <button>Search</button>
-</div>
-
-<!-- Popular Destinations -->
-<div class="section">
+<!-- Destinations -->
+<div class="destinations">
     <h2>Popular Destinations</h2>
+
     <div class="cards">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea">
+            <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c">
             <h3>Paris</h3>
-            <p>Starting from ₹40,000</p>
         </div>
+
         <div class="card">
             <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
             <h3>Dubai</h3>
-            <p>Starting from ₹25,000</p>
         </div>
+
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1549887534-3db6b9c03e45">
-            <h3>Maldives</h3>
-            <p>Starting from ₹60,000</p>
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <h3>Goa</h3>
         </div>
+    </div>
+</div>
+
+<!-- Offers -->
+<div class="offers">
+    <h2>Best Offers</h2>
+
+    <div class="offer-box">
+        <h3>50% Off Flights</h3>
+        <p>Limited Time Offer</p>
+    </div>
+
+    <div class="offer-box">
+        <h3>Hotel Deals</h3>
+        <p>Save up to 40%</p>
     </div>
 </div>
 
 <!-- Footer -->
 <div class="footer">
-    <p>© 2026 TravelNow | All Rights Reserved</p>
+    <p>© 2026 TravelGo | All Rights Reserved</p>
 </div>
-
-<!-- Watson Chatbot -->
-<script>
-window.watsonAssistantChatOptions = {
-    integrationID: "85dbf216-fe97-4e01-ade4-66cb0286aa3a",
-    region: "eu-de",
-    serviceInstanceID: "3d18ec9b-8d04-44bf-9d2d-c1e244d1af6e",
-    onLoad: async (instance) => { await instance.render(); }
-};
-setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" 
-    + (window.watsonAssistantChatOptions.clientVersion || 'latest') 
-    + "/WatsonAssistantChatEntry.js";
-    document.head.appendChild(t);
-});
-</script>
 
 </body>
 </html>
