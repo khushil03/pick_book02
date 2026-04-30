@@ -1,137 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Book Library</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f1ea;
-    }
-
-    header {
-      background-color: #4a3f35;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #6b5b4d;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    .book-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .book-card {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      text-align: center;
-    }
-
-    .book-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
-
-    footer {
-      background-color: #4a3f35;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Website</title>
 </head>
-
 <body>
 
-  <header>
-    <h1>📚 My Book Library</h1>
-    <p>Explore your favorite books</p>
-  </header>
+    <h1>Welcome to My Website</h1>
+    <p>This website has an embedded chatbot.</p>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Categories</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <div class="container">
-    <h2>Featured Books</h2>
-
-    <div class="book-grid">
-
-      <div class="book-card">
-        <img src="https://via.placeholder.com/200x250" alt="Book">
-        <h3>The Great Adventure</h3>
-        <p>Author: John Doe</p>
-      </div>
-
-      <div class="book-card">
-        <img src="https://via.placeholder.com/200x250" alt="Book">
-        <h3>Learning HTML</h3>
-        <p>Author: Jane Smith</p>
-      </div>
-
-      <div class="book-card">
-        <img src="https://via.placeholder.com/200x250" alt="Book">
-        <h3>JavaScript Basics</h3>
-        <p>Author: Alex Brown</p>
-      </div>
-
-    </div>
-  </div>
-
-  <footer>
-    <p>© 2026 My Library | All Rights Reserved</p>
-  </footer>
-
-  <!-- Watson Assistant Chat -->
-  <script>
-    window.watsonAssistantChatOptions = {
-      integrationID: "85dbf216-fe97-4e01-ade4-66cb0286aa3a",
-      region: "eu-de",
-      serviceInstanceID: "3d18ec9b-8d04-44bf-9d2d-c1e244d1af6e",
-      onLoad: async (instance) => { await instance.render(); }
-    };
-
-    setTimeout(function(){
-      const t = document.createElement('script');
-      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" 
-              + (window.watsonAssistantChatOptions.clientVersion || 'latest') 
-              + "/WatsonAssistantChatEntry.js";
-      document.head.appendChild(t);
-    });
-  </script>
+    <!-- Watson Assistant Chat Script -->
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "85dbf216-fe97-4e01-ade4-66cb0286aa3a",
+        region: "eu-de",
+        serviceInstanceID: "3d18ec9b-8d04-44bf-9d2d-c1e244d1af6e",
+        onLoad: async (instance) => { await instance.render(); }
+      };
+      setTimeout(function(){
+        const t = document.createElement('script');
+        t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" 
+                + (window.watsonAssistantChatOptions.clientVersion || 'latest') 
+                + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
 
 </body>
 </html>
