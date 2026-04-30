@@ -3,224 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Professional Website</title>
+<title>Travel Booking Website</title>
 
 <style>
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* BODY */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background: #f2f5f9;
 }
 
-/* NAVBAR */
-nav {
-    background: #333;
+/* Navbar */
+.navbar {
+    background: #0a223d;
     color: white;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-}
-
-nav .container {
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    margin: auto;
 }
-
-nav ul {
-    display: flex;
+.navbar h2 {
+    margin: 0;
+}
+.navbar ul {
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/* HERO */
-.hero {
-    height: 90vh;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 50px;
-}
-
-.hero p {
-    font-size: 20px;
-}
-
-/* SECTIONS */
-section {
-    padding: 60px 20px;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
-}
-
-/* ABOUT */
-.about {
-    background: #f4f4f4;
-}
-
-/* SERVICES */
-.services {
     display: flex;
     gap: 20px;
 }
+.navbar ul li {
+    cursor: pointer;
+}
 
-.service-box {
-    flex: 1;
-    background: #eee;
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
+    height: 350px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero h1 {
+    font-size: 40px;
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Search Box */
+.search-box {
+    background: white;
+    margin: -50px auto;
+    width: 80%;
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
-}
-
-/* CONTACT */
-.contact form {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-.contact input, .contact textarea {
-    margin: 10px 0;
+.search-box input, .search-box button {
     padding: 10px;
+    font-size: 16px;
 }
-
-.contact button {
-    background: #333;
+.search-box button {
+    background: #ff5a5f;
     color: white;
-    padding: 10px;
     border: none;
+    cursor: pointer;
 }
 
-/* FOOTER */
-footer {
-    background: #333;
+/* Cards Section */
+.section {
+    padding: 40px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.card h3 {
+    padding: 10px;
+}
+.card p {
+    padding: 0 10px 10px;
+}
+
+/* Footer */
+.footer {
+    background: #0a223d;
     color: white;
     text-align: center;
     padding: 20px;
-}
-
-/* RESPONSIVE */
-@media(max-width: 768px) {
-    .services {
-        flex-direction: column;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
 }
 </style>
 
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav>
-    <div class="container">
-        <h2>MySite</h2>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+<!-- Navbar -->
+<div class="navbar">
+    <h2>TravelNow</h2>
+    <ul>
+        <li>Flights</li>
+        <li>Hotels</li>
+        <li>Packages</li>
+        <li>Contact</li>
+    </ul>
+</div>
 
-<!-- HERO -->
-<section class="hero">
-    <div>
-        <h1>Welcome to My Website</h1>
-        <p>Your modern chatbot-powered website</p>
-    </div>
-</section>
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Explore the World with Us</h1>
+</div>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-    <div class="container">
-        <h2>About Us</h2>
-        <p>This is a demo website with a chatbot integration. You can customize this section with your own content.</p>
-    </div>
-</section>
+<!-- Search Box -->
+<div class="search-box">
+    <input type="text" placeholder="From">
+    <input type="text" placeholder="To">
+    <input type="date">
+    <button>Search</button>
+</div>
 
-<!-- SERVICES -->
-<section id="services">
-    <div class="container">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service-box">
-                <h3>Web Design</h3>
-                <p>Modern and responsive websites.</p>
-            </div>
-            <div class="service-box">
-                <h3>Development</h3>
-                <p>High-quality coding solutions.</p>
-            </div>
-            <div class="service-box">
-                <h3>Support</h3>
-                <p>24/7 chatbot assistance.</p>
-            </div>
+<!-- Popular Destinations -->
+<div class="section">
+    <h2>Popular Destinations</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea">
+            <h3>Paris</h3>
+            <p>Starting from ₹40,000</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
+            <h3>Dubai</h3>
+            <p>Starting from ₹25,000</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1549887534-3db6b9c03e45">
+            <h3>Maldives</h3>
+            <p>Starting from ₹60,000</p>
         </div>
     </div>
-</section>
+</div>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </div>
-</section>
+<!-- Footer -->
+<div class="footer">
+    <p>© 2026 TravelNow | All Rights Reserved</p>
+</div>
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 My Website | All Rights Reserved</p>
-</footer>
-
-<!-- CHATBOT SCRIPT -->
+<!-- Watson Chatbot -->
 <script>
-  window.watsonAssistantChatOptions = {
+window.watsonAssistantChatOptions = {
     integrationID: "85dbf216-fe97-4e01-ade4-66cb0286aa3a",
     region: "eu-de",
     serviceInstanceID: "3d18ec9b-8d04-44bf-9d2d-c1e244d1af6e",
     onLoad: async (instance) => { await instance.render(); }
-  };
-  setTimeout(function(){
+};
+setTimeout(function(){
     const t=document.createElement('script');
     t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" 
-          + (window.watsonAssistantChatOptions.clientVersion || 'latest') 
-          + "/WatsonAssistantChatEntry.js";
+    + (window.watsonAssistantChatOptions.clientVersion || 'latest') 
+    + "/WatsonAssistantChatEntry.js";
     document.head.appendChild(t);
-  });
+});
 </script>
 
 </body>
